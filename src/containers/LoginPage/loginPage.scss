@@ -1,0 +1,167 @@
+  @import "../../../assets/baseCss/base";
+
+.login-wrapper {
+  background-color: $primary-color-grey;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  .login {
+    min-height: 57%;
+    width: 68%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: $primary-color-grey-dark;
+    padding-bottom: 100px;
+
+    .logo {
+      text-align: center;
+      margin-top: 26px;
+      margin-bottom: 51px;
+    }
+
+    .title {
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    .sub-title {
+      font-size: 18px;
+    }
+
+    .claim-area {
+      padding-left: 52px;
+      padding-right: 90px;
+      .title {
+        margin-bottom: 65px;
+      }
+      .sub-title {
+        margin-bottom: 35px;
+        text-align: center;
+        margin-left: 8px;
+      }
+      .biits-btn {
+        margin-left: 12px;
+      }
+    }
+
+    .login-area {
+      padding-left: 90px;
+      padding-right: 73px;
+
+      .title {
+        margin-bottom: 42px;
+      }
+
+      .inputText {
+        font-size: 14px;
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid $primary-color-grey-dark;
+        padding-left: 0px;
+        width: 100%;
+
+        &:focus{
+          outline: none;
+        }
+
+        &:focus ~ .floating-label {
+          top: -20px;
+          bottom: 10px;
+          left: 0px;
+          opacity: 1;
+          color: $primary-color-blue;
+          font-size: 15px;
+        }
+
+        &:not(:focus):required:valid ~ .floating-label {
+          top: -20px;
+          bottom: 10px;
+          left: 0px;
+          opacity: 1;
+          font-size: 14px;
+        }
+      }
+
+      .floating-label {
+        position: absolute;
+        pointer-events: none;
+        left: 0px;
+        bottom: 15px;
+        font-size: 14px;
+        transition: 0.2s ease all;
+      }
+
+      .error {
+        color: red;
+        margin-top: -30px;
+        margin-bottom: 30px;
+      }
+
+      .email, .password {
+        position: relative;
+        height: 3em;
+        padding-right: 20px;
+      }
+
+      .email {
+        margin-bottom: 40px;
+      }
+
+      .password {
+        margin-bottom: 20px;
+      }
+
+      .keep-login {
+        text-align: right;
+        margin-bottom: 16px;
+        padding-right: 10px;
+
+        input {
+          margin-right: 5px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+      .biits-btn {
+        margin-bottom: 21px;
+        width: 100%;
+      }
+
+      .forgot-pw {
+        font-size: 16px;
+        padding-right: 10px;
+        text-align: right;
+      }
+
+    }
+
+    .footer-block {
+      font-size: 16px;
+      left: 0;
+      text-align: center;
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+    }
+
+  }
+}
+
+@media (max-width: $tablet-landscape-resolution) {
+  .login{
+
+    width: 100% !important;
+    height: 100% !important;
+
+    .claim-area{
+      margin-bottom: 100px;
+    }
+  }
+}
